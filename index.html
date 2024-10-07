@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script type="text/javascript"src="Calculadora1.js" defer></script>
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <div class="fundo">
+        <h1>Calculadora</h1>
+        <div class="visor">
+            <p id="tela"></p>
+        </div>
+        <div class="tabela">
+          <table>
+            <tr>
+                <td><button class="button1"onclick="limpar()">C</button></td>
+                <td><button class="button"onclick="volta()"><</button></td>
+                <td><button class="button"onclick="insertOpr('/')">/</button></td>
+                <td><button class="button"onclick="insertOpr('*')">x</button></td>
+            </tr>
+            <tr> 
+                <td><button class="button" onclick="insertNum('7')">7</button></td>
+                <td><button class="button" onclick="insertNum('8')">8</button></td>
+                <td><button class="button" onclick="insertNum('9')">9</button></td>
+                <td><button class="button" onclick="insertOpr('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="button"onclick="insertNum('4')">4</button></td>
+                <td><button class="button"onclick="insertNum('5')">5</button></td>
+                <td><button class="button"onclick="insertNum('6')">6</button></td>
+                <td><button class="button" onclick="insertOpr('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="insertNum('1')">1</button></td>
+                <td><button class="button" onclick="insertNum('2')">2</button></td>
+                <td><button class="button" onclick="insertNum('3')">3</button></td>
+                <td rowspan="2"><button class="button1" style="height:106px" onclick="calcular()">=</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="button" onclick="insertNum('0')" style="width:106px">0</button></td>
+                <td><button class="button"onclick="insertOpr('.')">.</button></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    <div class="history">
+        <h3>Histórico</h3>
+        <ul id="history-list"></ul>  
+    </div>
+</body>
+</html>
